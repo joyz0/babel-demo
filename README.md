@@ -72,9 +72,9 @@ import "regenerator-runtime/runtime";
 
 @babel/plugin-transform-runtime 主要做三件事
 
-1. 原本内嵌在每个文件的 helpers 改成模块引用的方式（需要开启 helpers 选项），减少代码体积，依赖@babel/runtime；
-2. 原本转换 generator 和 async 语法后暴露在全局环境中的 regeneratorRuntime（regenerator-runtime 包提供）改为模块引用的方式（需要开启 regenerator 选项），依赖@babel/runtime；
-3. 原本由于 core-js 暴露在全局环境中的 polyfill 特性（比如 Array.prototype.includes）改成模块引用的方式（需要开启 corejs 选项），依赖@babel/runtime-corejs2 或@babel/runtime-corejs3。
+1. 原本内嵌在每个文件的 helpers 改成模块引用的方式（需要开启 helpers 选项，默认开启），减少代码体积，依赖@babel/runtime；
+2. 原本转换 generator 和 async 语法后暴露在全局环境中的 regeneratorRuntime（regenerator-runtime 包提供）改为模块引用的方式（需要开启 regenerator 选项，默认开启），依赖@babel/runtime；
+3. 原本由于 core-js 暴露在全局环境中的 polyfill 特性（比如 Array.prototype.includes）改成模块引用的方式（需要开启 corejs 选项，默认关闭），依赖@babel/runtime-corejs2 或@babel/runtime-corejs3。
 
 ## 常用配置
 
