@@ -1,0 +1,7 @@
+{
+  "index.js": "index.bundle.js",
+  "index2.js": "index2.bundle.js",
+  "runtime.js": "runtime.bundle.js",
+  "vendors~index~index2.js": "vendors~index~index2.bundle.js",
+  "index.html": "index.html"
+}
