@@ -1,11 +1,11 @@
 ## 几个 demo
 
-- [demo1: 简单的箭头函数转换](./src/demo1)
-- demo2
-- demo3
-- demo4
-- react
-- webpack
+- [demo1: 只转换箭头函数](./src/demo1)
+- [demo2: 在代码中使用](./src/demo2)
+- [demo3: 使用@babel/preset-env 简化配置](./src/demo3)
+- [demo4: 使用@babel/plugin-transform-runtime](./src/demo4)
+- [react](./src/react)
+- [webpack](./src/webpack)
 
 ## babel 能做什么
 
