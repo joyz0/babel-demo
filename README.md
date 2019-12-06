@@ -51,9 +51,8 @@ import "regenerator-runtime/runtime";
 
 - 🌟@babel/preset-env  
   默认会根据[Browserslist](https://github.com/browserslist/browserslist#queries)引入对应 ES2015+版本的 polyfills，除非指定了 targets 或 ignoreBrowserslistConfig。
-
-  包含了 plugins，会根据 useBuiltIns 选项决定以何种方式引入@babel/polyfill，当 useBuiltIns=true 时同时也要指定 corejs。  
-  还有许多其他的[参数配置](https://babeljs.io/docs/en/babel-preset-env#targets)
+  包含了 plugins，会根据 useBuiltIns 选项决定以何种方式引入@babel/polyfill，当 useBuiltIns=true 时要指定 corejs 的版本。  
+  还有许多其他的[参数配置](https://babeljs.io/docs/en/babel-preset-env#targets)。
 
 - @babel/preset-react
 - @babel/preset-typescript
@@ -121,7 +120,7 @@ module.exports = {
 
 ## corejs2 和 corejs3 的区别
 
-core-js@2 分支中不包含新实例方法特性，并且已经不会再添加新特性，新特性都会添加到 core-js@3。例如你使用了 Array.prototype.flat()，如果你使用的是 core-js@2，那么其不包含此新特性。
+core-js@2 分支中不包含一些最新的实例方法特性，新特性都会添加到 core-js@3，建议都使用后者。例如 core-js@2 不包含 rray.prototype.flat()。
 
 ## stage 介绍
 
