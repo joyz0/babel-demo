@@ -36,18 +36,16 @@
 
 ### @babel/polyfill
 
-包含了 corejs 和 regenerator 这两个第三方包。  
-不同于 plugins 对语法的转换，polyfill 是对新实例特性的降级实现，双方是互补的关系。  
-babel7.4.0 后@babel/polyfill 被标记为 deprecated，推荐我们直接使用 corejs 和 regenerator。  
-不会导入小于 stage 4 的特性，默认为 core-js2。  
-⚠️ 在一个开源的 library 中并不推荐使用它。  
-⚠️ 通常我们需要在 entry 中手动引入 polyfill，当使用 babel-node 时会自动引入。  
-⚠️ polyfill 会直接修改全局变量（比如 Array，String 等）prototype，某种意义上污染了全局环境，如果我们不希望污染全局变量，可以使用@babel/plugin-transform-runtime。
+包含了 corejs 和 regenerator 这两个第三方包，不会导入小于 stage 4 的特性，默认为 core-js2。不同于 plugins 对语法的转换，polyfill 是对新实例特性的降级实现，双方是互补的关系。babel7.4.0 后@babel/polyfill 被标记为 deprecated，推荐我们直接使用 corejs 和 regenerator。
 
 ```js
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 ```
+
+⚠️ 在一个开源的 library 中并不推荐使用它。  
+⚠️ 通常我们需要在 entry 中手动引入 polyfill，当使用 babel-node 时会自动引入。  
+⚠️ polyfill 会直接修改全局变量（比如 Array，String 等）prototype，某种意义上污染了全局环境，如果我们不希望污染全局变量，可以使用@babel/plugin-transform-runtime。
 
 ### @babel/presets
 
