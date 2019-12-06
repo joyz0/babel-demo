@@ -62,7 +62,7 @@ import "regenerator-runtime/runtime";
 
 ### @babel/plugins
 
-我们这里代指一系列 plugin 包，当我们精确知道项目需要哪种语法特性时，可以单独引入所对应的 plugin 包以减少最终打包体积。
+我们这里代指一系列 plugin 包，当我们精确知道项目需要哪种语法特性时，可以单独引入所对应的 plugin 包以减少最终打包体积。  
 ⚠️ 配置文件中的 plugins 数组执行顺序从左到右，presets 数组执行顺序从右到左。  
 当我们需要知道某个 plugin 包所对应的 options 时，可以参考[官网](https://babeljs.io/docs/en/options)或去源码处查看
 ![1](./assets/1.jpg)
