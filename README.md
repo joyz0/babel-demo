@@ -122,6 +122,10 @@ module.exports = {
 
 core-js@2 分支中不包含一些最新的实例方法特性，新特性都会添加到 core-js@3，建议都使用后者。例如 core-js@2 不包含 rray.prototype.flat()。
 
+## corejs3 和 @babel/runtime-corejs3 的区别
+
+前者的 polyfill 都是修改全局对象的 prototype 中的，后者是局部文件中以引用的形式存在不会污染全局变量。
+
 ## stage 介绍
 
 - Stage 0 - Strawman: just an idea, possible Babel plugin.
