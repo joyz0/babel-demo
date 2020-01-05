@@ -76,6 +76,8 @@ import "regenerator-runtime/runtime";
 2. 原本转换 generator 和 async 语法后暴露在全局环境中的 regeneratorRuntime（regenerator-runtime 包提供）改为模块引用的方式（需要开启 regenerator 选项，默认开启），依赖@babel/runtime；
 3. 原本由于 core-js 暴露在全局环境中的 polyfill 特性（比如 Array.prototype.includes）改成模块引用的方式（需要开启 corejs 选项，默认关闭），依赖@babel/runtime-corejs2 或@babel/runtime-corejs3。
 
+> 关于 helpers、generator、polyfill 的引用方式———全局污染、局部引用、代码内嵌，在 webpack 和 rollup 使用时要分开了解，不然太乱了。。rollup 有一个额外的 rollup-plugin-babel，虽说会采用本地的 .babelrc 文件中的配置，但又额外增加了一些选项，而有些选项又是和 @babel/plugin-transform-runtime 中的重复的，比如 @babel/plugin-transform-runtime 中 helpers 默认是 tru e的，但在 rollup 中需要开启 runtimeHelpers；类似的还有 externalHelpers，它的效果是变成全局污染模式。
+
 ## 常用配置
 
 #### spec
